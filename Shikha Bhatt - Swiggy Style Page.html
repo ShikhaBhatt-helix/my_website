@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shikha Bhatt · Senior Product Manager</title>
+<style>
+:root{--or:#FC8019;--or-d:#E8710F;--ink:#02060C;--ink2:#282C3F;--mute:#686B78;--line:#E9E9EB;--soft:#F1F1F6;--green:#3D9B6D;--r:16px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:"ProximaNova","Proxima Nova",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--ink2);background:#fff;-webkit-font-smoothing:antialiased;line-height:1.4}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:#fff;box-shadow:0 15px 40px -20px rgba(40,44,63,.15)}
+.bar{height:80px;display:flex;align-items:center;gap:28px}
+.logo{width:48px;height:48px;border-radius:14px;background:var(--or);display:grid;place-items:center;color:#fff;font-weight:800;font-size:24px;flex:none}
+.loc{display:flex;align-items:center;gap:8px;font-size:14px}
+.loc b{border-bottom:2px solid var(--ink2);font-weight:700;padding-bottom:1px}
+.loc span{color:var(--mute);max-width:200px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.loc svg{width:12px;height:12px;stroke:var(--or);fill:none;stroke-width:3}
+nav{margin-left:auto;display:flex;gap:36px}
+nav a{display:flex;align-items:center;gap:10px;font-weight:600;font-size:16px;color:var(--ink2)}
+nav a:hover{color:var(--or)}
+nav svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2}
+
+/* hero */
+.hero{background:linear-gradient(180deg,#FFF6EC 0%,#fff 100%);padding:48px 0 12px}
+.hero .in{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;background:#fff;border:1px solid #FFD9B3;color:var(--or-d);font-weight:700;font-size:13px;padding:6px 12px;border-radius:999px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--green)}
+h1{font-size:56px;line-height:1.05;font-weight:800;letter-spacing:-1.5px;color:var(--ink);margin:16px 0 12px}
+h1 em{font-style:normal;color:var(--or)}
+.sub{font-size:20px;color:var(--ink2);font-weight:500}
+.hl{color:var(--mute);margin-top:6px;font-size:16px}
+.cta{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+.btn{padding:14px 26px;border-radius:12px;font-weight:700;font-size:16px;display:inline-block;transition:transform .1s}
+.btn:active{transform:scale(.97)}
+.b1{background:var(--or);color:#fff}.b1:hover{background:var(--or-d)}
+.b2{border:2px solid var(--ink2);color:var(--ink2)}.b2:hover{background:var(--ink2);color:#fff}
+.hcard{background:var(--or);border-radius:28px;padding:28px;color:#fff;position:relative;overflow:hidden;min-height:300px;display:flex;flex-direction:column;justify-content:flex-end}
+.hcard:before{content:"";position:absolute;width:320px;height:320px;border-radius:50%;background:rgba(255,255,255,.14);right:-90px;top:-100px}
+.hcard:after{content:"";position:absolute;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,.1);left:-60px;bottom:40px}
+.hcard .big{font-size:96px;font-weight:800;letter-spacing:-4px;line-height:1;position:relative;z-index:1}
+.hcard p{font-weight:700;font-size:20px;position:relative;z-index:1}
+.hcard small{opacity:.9;font-size:14px;position:relative;z-index:1;margin-top:4px}
+.hcard .strip{position:relative;z-index:1;margin-top:18px;background:#fff;color:var(--ink2);border-radius:14px;padding:12px 16px;display:flex;gap:12px;align-items:center;font-size:14px;font-weight:600}
+.hcard .strip i{font-style:normal;background:#FFF1E4;color:var(--or-d);padding:4px 8px;border-radius:8px;font-size:12px;font-weight:800}
+
+/* sections */
+section{padding:36px 0}
+.sec{border-top:1px solid var(--line)}
+h2{font-size:24px;font-weight:800;color:var(--ink);letter-spacing:-.4px;margin-bottom:4px}
+.lead{color:var(--mute);margin-bottom:22px;font-size:15px}
+.sechead{display:flex;justify-content:space-between;align-items:flex-end}
+.arrows{display:flex;gap:10px}
+.arrows button{width:34px;height:34px;border-radius:50%;border:0;background:var(--soft);cursor:pointer;display:grid;place-items:center}
+.arrows button:hover{background:#e4e4ea}
+.arrows svg{width:16px;height:16px;stroke:var(--ink2);stroke-width:2.5;fill:none}
+
+/* what's on your mind (circles) */
+.circles{display:flex;gap:28px;overflow-x:auto;padding:6px 2px 10px;scrollbar-width:none}
+.circles::-webkit-scrollbar{display:none}
+.cir{flex:none;width:120px;text-align:center}
+.cir .c{width:120px;height:120px;border-radius:50%;display:grid;place-items:center;font-size:42px;margin-bottom:8px;transition:transform .2s;color:#fff;font-weight:800}
+.cir:hover .c{transform:scale(1.06)}
+.cir b{font-size:15px;color:var(--ink2);font-weight:700}
+
+/* horizontal rail */
+.rail{display:flex;gap:24px;overflow-x:auto;padding:4px 2px 14px;scroll-snap-type:x mandatory;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.rc{flex:none;width:280px;scroll-snap-align:start;transition:transform .2s}
+.rc:hover{transform:scale(.97)}
+.img{height:182px;border-radius:var(--r);position:relative;overflow:hidden;display:grid;place-items:center;color:#fff}
+.img .mono{font-size:60px;font-weight:800;letter-spacing:-2px;text-shadow:0 2px 12px rgba(0,0,0,.18)}
+.img:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.78) 0%,rgba(0,0,0,0) 55%)}
+.offer{position:absolute;left:12px;bottom:10px;z-index:2;color:#fff;font-size:22px;font-weight:800;letter-spacing:-.5px;text-transform:uppercase}
+.rc h4,.gc h4{font-size:18px;font-weight:700;color:var(--ink2);margin-top:12px}
+.rate{display:flex;align-items:center;gap:6px;font-weight:700;font-size:16px;margin-top:2px}
+.rate .st{width:20px;height:20px;border-radius:50%;background:var(--green);display:grid;place-items:center}
+.rate .st svg{width:11px;height:11px;fill:#fff}
+.meta{color:var(--mute);font-size:15px;font-weight:500;margin-top:2px}
+.meta.t{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* grid cards */
+.gg{display:grid;grid-template-columns:repeat(4,1fr);gap:32px 24px}
+.gc{transition:transform .2s}.gc:hover{transform:scale(.97)}
+
+/* details timeline */
+.job{display:grid;grid-template-columns:180px 1fr;gap:24px;padding:22px 0;border-top:1px dashed var(--line)}
+.job:first-of-type{border-top:0}
+.job .w{color:var(--mute);font-size:14px;font-weight:500}
+.job .w b{display:block;color:var(--ink2);font-size:15px}
+.job h4{font-size:18px;font-weight:800;color:var(--ink)}
+.job .co{font-weight:600;margin-top:2px}
+.job .wh{color:var(--mute);font-size:14px}
+.job ul{margin:10px 0 0 18px;max-width:640px}
+.job li+li{margin-top:6px}
+.sr{margin-top:12px;padding-left:14px;border-left:3px solid #FFD9B3}
+.sr b{display:block;font-weight:700}.sr span{font-size:14px;color:var(--mute)}
+
+/* chips */
+.chips{display:flex;flex-wrap:wrap;gap:12px}
+.chip{border:1px solid var(--line);border-radius:12px;padding:12px 18px;font-weight:700;display:flex;gap:8px;align-items:center;background:#fff;box-shadow:0 2px 8px rgba(40,44,63,.05)}
+.chip small{font-weight:500;color:var(--mute)}
+.chip.o{background:#FFF1E4;border-color:#FFD9B3;color:var(--or-d)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+
+/* awards */
+.aws{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.aw{border:1px solid var(--line);border-radius:var(--r);padding:18px;display:flex;gap:14px;align-items:flex-start;font-weight:600}
+.aw i{flex:none;width:40px;height:40px;border-radius:12px;background:#FFF1E4;display:grid;place-items:center}
+.aw svg{width:22px;height:22px;fill:var(--or)}
+
+/* edu */
+.edu{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.ed{border-radius:var(--r);padding:22px;background:var(--soft)}
+.ed .y{display:inline-block;background:#fff;border-radius:8px;padding:4px 10px;font-size:13px;font-weight:800;color:var(--or-d);margin-bottom:10px}
+.ed h5{font-size:18px;font-weight:800;color:var(--ink)}
+.ed p{color:var(--mute);margin-top:4px;font-size:15px}
+
+/* contact + footer */
+.cbox{background:var(--or);border-radius:28px;padding:44px;color:#fff;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.cbox h2{color:#fff;font-size:32px}
+.cbox p{opacity:.95;font-weight:500}
+.cbox .btn{background:#fff;color:var(--or-d)}
+.cbox .btn.o{background:transparent;color:#fff;border:2px solid #fff;margin-left:8px}
+footer{background:var(--ink);color:#fff;padding:48px 0 32px;margin-top:20px}
+footer .f{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:32px}
+footer h6{font-size:15px;font-weight:800;margin-bottom:12px;color:#fff;text-transform:uppercase;letter-spacing:.4px;opacity:.7}
+footer a,footer p{display:block;color:#fff;font-size:15px;margin-bottom:8px;opacity:.9}
+footer a:hover{color:var(--or)}
+footer .big{font-size:28px;font-weight:800;letter-spacing:-.5px;opacity:1}
+footer .c{margin-top:28px;padding-top:20px;border-top:1px solid #2a2e3a;font-size:13px;opacity:.6}
+
+/* floating bar */
+.fb{position:fixed;bottom:0;left:0;right:0;background:var(--or);color:#fff;z-index:60;transform:translateY(100%);transition:transform .3s}
+.fb.show{transform:none}
+.fb .in{display:flex;justify-content:space-between;align-items:center;height:56px;max-width:1080px;margin:0 auto;padding:0 20px;font-weight:700;font-size:15px;text-transform:uppercase;letter-spacing:.3px}
+.fb a{display:flex;gap:6px;align-items:center}
+
+@media(max-width:900px){
+  nav a span{display:none}nav{gap:20px}
+  .hero .in{grid-template-columns:1fr}
+  .gg{grid-template-columns:repeat(2,1fr)}
+  .edu{grid-template-columns:1fr}
+  h1{font-size:44px}
+}
+@media(max-width:620px){
+  .bar{height:64px;gap:14px}
+  .loc span{max-width:120px}
+  h1{font-size:36px}
+  .two,.aws{grid-template-columns:1fr}
+  .job{grid-template-columns:1fr;gap:6px}
+  .gg{grid-template-columns:1fr}
+  .cbox{padding:28px}.cbox .btn.o{margin:10px 0 0}
+  footer .f{grid-template-columns:1fr}
+  nav{display:none}
+  .hcard .big{font-size:72px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#top" aria-label="Home">S</a>
+    <div class="loc"><b>Home</b><span>Bengaluru, Karnataka, India</span>
+      <svg viewBox="0 0 12 12"><path d="M2 4l4 4 4-4"/></svg></div>
+    <nav>
+      <a href="#experience"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/></svg><span>Experience</span></a>
+      <a href="#skills"><svg viewBox="0 0 24 24"><path d="M12 2l3 6.500 7 .8-5.200 4.800 1.400 7L12 17.500 5.800 21l1.400-7L2 9.300l7-.8z"/></svg><span>Skills</span></a>
+      <a href="#awards"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M8.500 14L7 22l5-3 5 3-1.500-8"/></svg><span>Awards</span></a>
+      <a href="#education"><svg viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.500 3 3 6 3s6-1.500 6-3v-5"/></svg><span>Education</span></a>
+      <a href="#contact"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span>Contact</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap in">
+      <div>
+        <span class="eyebrow"><i class="dot"></i> Currently at PayPal</span>
+        <h1>Hi, I’m <em>Shikha Bhatt.</em></h1>
+        <p class="sub">AI native PM | PayPal | Ex-Walmart, VISA | ISB</p>
+        <p class="hl">Bengaluru, Karnataka, India</p>
+        <p class="hl" style="margin-top:14px;max-width:480px;color:var(--ink2)">Back in fintech with PayPal’s Global Product Solutioning team — working on identity and payment solutions being brought in by the EU, and owning Fastlane’s expansion to increase the user network.</p>
+        <div class="cta">
+          <a class="btn b1" href="mailto:shikhabhat16@gmail.com">Say hello</a>
+          <a class="btn b2" href="#experience">See my work</a>
+        </div>
+      </div>
+      <div class="hcard">
+        <div class="big">10+</div>
+        <p>years building products</p>
+        <small>Engineering at Visa → Product at PayPal, Walmart &amp; Mason</small>
+        <div class="strip"><i>NOW</i> Senior Product Manager, PayPal</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- What's on your mind -->
+  <section class="wrap">
+    <h2>What would you like to explore?</h2>
+    <p class="lead">Jump to a section</p>
+    <div class="circles">
+      <a class="cir" href="#experience"><div class="c" style="background:linear-gradient(135deg,#FC8019,#F9552B)">💼</div><b>Experience</b></a>
+      <a class="cir" href="#timeline"><div class="c" style="background:linear-gradient(135deg,#5B6CFF,#3A44C8)">🧭</div><b>Journey</b></a>
+      <a class="cir" href="#skills"><div class="c" style="background:linear-gradient(135deg,#3D9B6D,#1F7A4D)">✨</div><b>Skills</b></a>
+      <a class="cir" href="#languages"><div class="c" style="background:linear-gradient(135deg,#F5B400,#E08A00)">🗣️</div><b>Languages</b></a>
+      <a class="cir" href="#awards"><div class="c" style="background:linear-gradient(135deg,#E23744,#B3202C)">🏆</div><b>Awards</b></a>
+      <a class="cir" href="#education"><div class="c" style="background:linear-gradient(135deg,#8E44AD,#5E2A7A)">🎓</div><b>Education</b></a>
+      <a class="cir" href="#contact"><div class="c" style="background:linear-gradient(135deg,#02060C,#282C3F)">✉️</div><b>Contact</b></a>
+    </div>
+  </section>
+
+  <!-- Top picks rail -->
+  <section class="wrap sec" id="experience">
+    <div class="sechead">
+      <div><h2>Top companies I’ve worked with</h2><p class="lead">Roles from the last decade</p></div>
+      <div class="arrows">
+        <button aria-label="Previous" onclick="document.getElementById('rail').scrollBy({left:-300,behavior:'smooth'})"><svg viewBox="0 0 16 16"><path d="M10 3L5 8l5 5"/></svg></button>
+        <button aria-label="Next" onclick="document.getElementById('rail').scrollBy({left:300,behavior:'smooth'})"><svg viewBox="0 0 16 16"><path d="M6 3l5 5-5 5"/></svg></button>
+      </div>
+    </div>
+    <div class="rail" id="rail">
+      <a class="rc" href="#t-paypal"><div class="img" style="background:linear-gradient(135deg,#0070BA,#003087)"><span class="mono">PP</span><span class="offer">Present</span></div>
+        <h4>PayPal</h4><div class="rate"><span class="st"><svg viewBox="0 0 12 12"><path d="M6 1l1.500 3.200 3.500.4-2.600 2.400.7 3.500L6 8.700 2.900 10.500l.7-3.500L1 4.600l3.500-.4z"/></svg></span>1 yr 3 mos</div>
+        <div class="meta t">Senior Product Manager</div><div class="meta t">Bangalore Urban, Karnataka</div></a>
+      <a class="rc" href="#t-walmart"><div class="img" style="background:linear-gradient(135deg,#0071DC,#2A8BE8 60%,#FFC220 160%)"><span class="mono">W</span><span class="offer">2024 – 2025</span></div>
+        <h4>Walmart Global Tech India</h4><div class="rate"><span class="st"><svg viewBox="0 0 12 12"><path d="M6 1l1.500 3.200 3.500.4-2.600 2.400.7 3.500L6 8.700 2.900 10.500l.7-3.500L1 4.600l3.500-.4z"/></svg></span>1 yr 3 mos</div>
+        <div class="meta t">Senior Product Manager</div><div class="meta t">Bengaluru, Karnataka</div></a>
+      <a class="rc" href="#t-paypal2"><div class="img" style="background:linear-gradient(135deg,#009CDE,#012169)"><span class="mono">PP</span><span class="offer">2021 – 2024</span></div>
+        <h4>PayPal</h4><div class="rate"><span class="st"><svg viewBox="0 0 12 12"><path d="M6 1l1.500 3.200 3.500.4-2.600 2.400.7 3.500L6 8.700 2.900 10.500l.7-3.500L1 4.600l3.500-.4z"/></svg></span>2 yrs 7 mos</div>
+        <div class="meta t">Product Manager 3</div><div class="meta t">Bengaluru, Karnataka</div></a>
+      <a class="rc" href="#t-mason"><div class="img" style="background:linear-gradient(135deg,#E23744,#8E1B2A)"><span class="mono">M</span><span class="offer">2020 – 2021</span></div>
+        <h4>Mason</h4><div class="rate"><span class="st"><svg viewBox="0 0 12 12"><path d="M6 1l1.500 3.200 3.500.4-2.600 2.400.7 3.500L6 8.700 2.900 10.500l.7-3.500L1 4.600l3.500-.4z"/></svg></span>1 yr 7 mos</div>
+        <div class="meta t">Senior Product Manager, Product Manager</div><div class="meta t">Bengaluru, Karnataka</div></a>
+      <a class="rc" href="#t-isb"><div class="img" style="background:linear-gradient(135deg,#8E44AD,#4A2060)"><span class="mono">ISB</span><span class="offer">MBA</span></div>
+        <h4>Indian School of Business</h4><div class="rate"><span class="st"><svg viewBox="0 0 12 12"><path d="M6 1l1.500 3.200 3.500.4-2.600 2.400.7 3.500L6 8.700 2.900 10.500l.7-3.500L1 4.600l3.500-.4z"/></svg></span>1 yr 1 mo</div>
+        <div class="meta t">MBA Candidate</div><div class="meta t">Major in IT and Marketing</div></a>
+      <a class="rc" href="#t-visa"><div class="img" style="background:linear-gradient(135deg,#1A1F71,#4B5BDB)"><span class="mono">V</span><span class="offer">2015 – 2019</span></div>
+        <h4>Visa</h4><div class="rate"><span class="st"><svg viewBox="0 0 12 12"><path d="M6 1l1.500 3.200 3.500.4-2.600 2.400.7 3.500L6 8.700 2.900 10.500l.7-3.500L1 4.600l3.500-.4z"/></svg></span>3 yrs 11 mos</div>
+        <div class="meta t">Senior Software Engineer, Test Engineer</div><div class="meta t">Bengaluru, Karnataka</div></a>
+    </div>
+  </section>
+
+  <!-- timeline -->
+  <section class="wrap sec" id="timeline">
+    <h2>The full menu</h2>
+    <p class="lead">Every role, with dates and what I worked on</p>
+
+    <div class="job" id="t-paypal">
+      <div class="w"><b>Aug 2025 – Present</b>1 year 3 months</div>
+      <div><h4>Senior Product Manager</h4><div class="co">PayPal</div><div class="wh">Bangalore Urban, Karnataka, India</div>
+        <ul>
+          <li>Back to Fintech, part of the Global Product Solutioning team working on interesting identity and payment solutions being brought in by the EU, and owning Fastlane’s expansion to increase the user network.</li>
+          <li>Building an AI native app for market sizing, used by internal teams at PayPal.</li>
+        </ul></div>
+    </div>
+    <div class="job" id="t-walmart">
+      <div class="w"><b>Jun 2024 – Aug 2025</b>1 year 3 months</div>
+      <div><h4>Senior Product Manager</h4><div class="co">Walmart Global Tech India</div><div class="wh">Bengaluru, Karnataka, India</div></div>
+    </div>
+    <div class="job" id="t-paypal2">
+      <div class="w"><b>Dec 2021 – Jun 2024</b>2 years 7 months</div>
+      <div><h4>Product Manager 3</h4><div class="co">PayPal</div><div class="wh">Bengaluru, Karnataka, India</div></div>
+    </div>
+    <div class="job" id="t-mason">
+      <div class="w"><b>Jun 2020 – Dec 2021</b>1 year 7 months</div>
+      <div><h4>Mason</h4>
+        <div class="sr"><b>Senior Product Manager</b><span>June 2021 – December 2021 · 7 months</span></div>
+        <div class="sr"><b>Product Manager</b><span>June 2020 – May 2021 · 1 year · Bengaluru, Karnataka, India</span></div></div>
+    </div>
+    <div class="job" id="t-isb">
+      <div class="w"><b>Apr 2019 – Apr 2020</b>1 year 1 month</div>
+      <div><h4>MBA Candidate</h4><div class="co">Indian School of Business</div><div class="wh">Major in IT and Marketing</div></div>
+    </div>
+    <div class="job" id="t-visa">
+      <div class="w"><b>Jun 2015 – Apr 2019</b>3 years 11 months</div>
+      <div><h4>Visa</h4>
+        <div class="sr"><b>Senior Software Engineer</b><span>June 2015 – April 2019 · 3 years 11 months · Bengaluru, Karnataka, India</span></div>
+        <div class="sr"><b>Test Engineer</b><span>June 2015 – October 2016 · 1 year 5 months</span></div></div>
+    </div>
+    <div class="job">
+      <div class="w"><b>Jul 2011 – May 2015</b>3 years 11 months</div>
+      <div><h4>VIT University</h4>
+        <div class="sr"><b>Computer Engineer</b><span>July 2011 – May 2015</span></div>
+        <div class="sr"><b>Computer Science Undergraduate</b><span>July 2011 – May 2015</span></div></div>
+    </div>
+  </section>
+
+  <!-- skills + languages -->
+  <section class="wrap sec">
+    <div class="two">
+      <div id="skills">
+        <h2>Top skills</h2><p class="lead">What I’m known for</p>
+        <div class="chips">
+          <div class="chip o">User Experience (UX)</div>
+          <div class="chip o">Product Vision</div>
+          <div class="chip o">Product Design</div>
+        </div>
+      </div>
+      <div id="languages">
+        <h2>Languages</h2><p class="lead">How I communicate</p>
+        <div class="chips">
+          <div class="chip">English <small>Native or Bilingual</small></div>
+          <div class="chip">Hindi <small>Full Professional</small></div>
+          <div class="chip">French <small>Elementary</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- awards -->
+  <section class="wrap sec" id="awards">
+    <h2>Honors &amp; awards</h2><p class="lead">Recognition along the way</p>
+    <div class="aws">
+      <div class="aw"><i><svg viewBox="0 0 24 24"><path d="M12 2l2.900 6 6.600.9-4.800 4.600 1.200 6.500L12 17l-5.900 3 1.200-6.500L2.500 8.900 9.100 8z"/></svg></i>Go Beyond award at VISA by Senior Director</div>
+      <div class="aw"><i><svg viewBox="0 0 24 24"><path d="M12 2l2.900 6 6.600.9-4.800 4.600 1.200 6.500L12 17l-5.900 3 1.200-6.500L2.500 8.900 9.100 8z"/></svg></i>Go Beyond award at VISA by Team Director for Collaboration and Teamwork</div>
+      <div class="aw"><i><svg viewBox="0 0 24 24"><path d="M12 2l2.900 6 6.600.9-4.800 4.600 1.200 6.500L12 17l-5.900 3 1.200-6.500L2.500 8.900 9.100 8z"/></svg></i>2nd Runner Up (National), The Hindu BLoC Case Competition</div>
+      <div class="aw"><i><svg viewBox="0 0 24 24"><path d="M12 2l2.900 6 6.600.9-4.800 4.600 1.200 6.500L12 17l-5.900 3 1.200-6.500L2.500 8.900 9.100 8z"/></svg></i>Admits for MBA at International Business Schools</div>
+      <div class="aw"><i><svg viewBox="0 0 24 24"><path d="M12 2l2.900 6 6.600.9-4.800 4.600 1.200 6.500L12 17l-5.900 3 1.200-6.500L2.500 8.900 9.100 8z"/></svg></i>CBSE Merit Certificate</div>
+    </div>
+  </section>
+
+  <!-- education -->
+  <section class="wrap sec" id="education">
+    <h2>Education</h2><p class="lead">Where I learned</p>
+    <div class="edu">
+      <div class="ed"><span class="y">2019 – 2020</span><h5>Indian School of Business</h5><p>Post Graduate Program</p></div>
+      <div class="ed"><span class="y">2011 – 2015</span><h5>Vellore Institute of Technology</h5><p>Bachelor of Technology (B.Tech.), Computer Engineering</p></div>
+      <div class="ed"><span class="y">1996 – 2011</span><h5>Kendriya Vidyalaya</h5><p>School</p></div>
+    </div>
+  </section>
+
+  <!-- contact -->
+  <section class="wrap" id="contact">
+    <div class="cbox">
+      <div><h2>Ready to connect?</h2><p>Drop me a note — I’d love to hear from you.</p></div>
+      <div><a class="btn" href="mailto:shikhabhat16@gmail.com">Email me</a><a class="btn o" href="https://www.linkedin.com/in/shikha-bhatt-2101b187" target="_blank" rel="noopener">LinkedIn</a></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f">
+      <div><p class="big">Shikha Bhatt</p><p>AI native PM | PayPal | Ex-Walmart, VISA | ISB</p><p>Bengaluru, Karnataka, India</p></div>
+      <div><h6>Explore</h6><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#awards">Awards</a><a href="#education">Education</a></div>
+      <div><h6>Contact</h6><a href="mailto:shikhabhat16@gmail.com">shikhabhat16@gmail.com</a><a href="https://www.linkedin.com/in/shikha-bhatt-2101b187" target="_blank" rel="noopener">linkedin.com/in/shikha-bhatt-2101b187</a></div>
+    </div>
+    <div class="c">© <span id="y"></span> Shikha Bhatt</div>
+  </div>
+</footer>
+
+<div class="fb" id="fb"><div class="in"><span>Senior PM · PayPal</span><a href="mailto:shikhabhat16@gmail.com">Say hello →</a></div></div>
+
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+var fb=document.getElementById('fb');
+addEventListener('scroll',function(){fb.classList.toggle('show',scrollY>500)},{passive:true});
+</script>
+</body>
+</html>
